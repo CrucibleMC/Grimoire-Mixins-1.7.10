@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "package": "io.github.crucible.grimoire.mixins.thaumcraft",
+  "mixins": [],
+  "server": [
+    "MixinBlockTable",
+    "MixinEntityBottleTaint",
+    "MixinEntityCultistPortal",
+    "MixinEntityEldritchGolem",
+    "MixinEntityPrimalOrb",
+    "MixinItemFocusPortableHole",
+    "MixinItemFocusPrimal",
+    "MixinItemFocusTrade",
+    "MixinTileArcaneBore",
+    "MixinTileNode",
+    "MixinWandManager"
+  ],
+  "client": [],
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7.11",
+  "target": "@env(DEFAULT)",
+  "refmap":"grimoire.refmap.json"
+}
