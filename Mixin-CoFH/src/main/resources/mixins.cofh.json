@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "io.github.crucible.grimoire.mixins.cofh",
+  "mixins": [],
+  "server": [
+    "MixinSecurityHelper",
+    "MixinThermalTile"
+  ],
+  "client": [],
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7.11",
+  "target": "@env(DEFAULT)",
+  "refmap":"grimoire.refmap.json"
+}
