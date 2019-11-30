@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "package": "io.github.crucible.grimoire.mixins.botania",
+  "mixins": [],
+  "server": [
+    "MixinEntityEnderAirBottle",
+    "MixinEntityManaBurst",
+    "MixinEntityThornChakram",
+    "MixinEntityVineBall",
+    "MixinItemExchangeRod",
+    "MixinItemGrassHorn",
+    "MixinItemGravityRod",
+    "MixinItemLokiRing",
+    "MixinItemRainbowRod",
+    "MixinItemSmeltRod",
+    "MixinItemTerraformRod",
+    "MixinItemWorldSeed",
+    "MixinTileCorporeaIndex",
+    "MixinTileSpreader",
+    "MixinToolCommons"
+  ],
+  "client": [],
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7.11",
+  "target": "@env(DEFAULT)",
+  "refmap":"grimoire.refmap.json"
+}
