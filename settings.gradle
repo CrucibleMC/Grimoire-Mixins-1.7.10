@@ -1,0 +1,4 @@
+rootProject.name = 'Grimoire-Mixins'
+
+include 'Mixin-Avaritia'
+include 'Mixin-CarpentersBlocks'

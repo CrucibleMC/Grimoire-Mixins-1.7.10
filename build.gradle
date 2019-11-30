@@ -1,0 +1,78 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'forge'
+
+    minecraft {
+        version = "1.7.10-10.13.4.1614-1.7.10"
+    }
+
+    group = 'io.github.crucible'
+    version = '1.0.1a'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    compileJava.options.encoding = 'UTF-8'
+
+    repositories {
+        maven {
+            name = 'spongepowered-repo'
+            url = 'http://repo.spongepowered.org/maven/'
+        }
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.spongepowered:mixin:0.7.11-SNAPSHOT"
+        compileOnly 'org.jetbrains:annotations:16.0.2'
+        compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    }
+
+    ext {
+        mixinSrg = new File(project.buildDir, 'mixins/mixin.grimoire.srg')
+        mixinRefMap = new File(project.buildDir, "mixins/grimoire.refmap.json")
+    }
+
+    jar {
+        from project.mixinRefMap
+    }
+
+    reobf {
+        addExtraSrgFile project.mixinSrg
+    }
+
+    compileJava {
+        options.compilerArgs += [
+                '-Xlint:-processing',
+                "-AoutSrgFile=${project.mixinSrg.canonicalPath}",
+                "-AoutRefMapFile=${project.mixinRefMap.canonicalPath}",
+                "-AreobfSrgFile=${project.file('build/srgs/mcp-srg.srg').canonicalPath}"
+        ]
+    }
+
+    task copySrgs(type: Copy, dependsOn: 'genSrgs') {
+        from plugins.getPlugin("forge").delayedFile('{SRG_DIR}')
+
+        include '**/*.srg'
+        into 'build/srgs'
+    }
+
+    compileJava.dependsOn copySrgs
+}
+
