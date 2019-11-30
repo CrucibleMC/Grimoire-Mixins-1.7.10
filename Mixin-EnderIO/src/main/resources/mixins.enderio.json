@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "io.github.crucible.grimoire.mixins.enderio",
+  "mixins": [],
+  "server": [
+    "MixinEnchantmentSoulBound",
+    "MixinPacketConnectionMode",
+    "MixinPacketExtractMode",
+    "MixinPacketGivePlayerXP",
+    "MixinPacketItemConduitFilter",
+    "MixinPacketOCConduitSignalColor",
+    "MixinPacketRedstoneConduitOutputStrength",
+    "MixinPacketRedstoneConduitSignalColor",
+    "MixinPacketTravelEvent"
+  ],
+  "client": [],
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7.11",
+  "target": "@env(DEFAULT)",
+  "refmap":"grimoire.refmap.json"
+}
