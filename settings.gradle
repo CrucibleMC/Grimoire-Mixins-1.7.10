@@ -1,5 +1,6 @@
 rootProject.name = 'Grimoire-Mixins'
 
+include 'Mixin-Forge'
 include 'Mixin-Avaritia'
 include 'Mixin-CarpentersBlocks'
 include 'Mixin-Mekanism'
@@ -8,4 +9,4 @@ include 'Mixin-DraconicEvolution'
 include 'Mixin-CoFH'
 include 'Mixin-Thaumcraft'
 include 'Mixin-Botania'
-include 'Mixin-Forge'
+include 'Mixin-MineFactoryReloaded'
