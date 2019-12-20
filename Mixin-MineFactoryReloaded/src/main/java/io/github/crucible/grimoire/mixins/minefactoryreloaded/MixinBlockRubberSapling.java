@@ -12,7 +12,7 @@ import powercrystals.minefactoryreloaded.world.WorldGenRubberTree;
 
 import java.util.Random;
 
-@Mixin(value = BlockRubberSapling.class, remap = true)
+@Mixin(value = BlockRubberSapling.class)
 public class MixinBlockRubberSapling extends BlockSapling implements IRedNetNoConnection {
 
     @Shadow

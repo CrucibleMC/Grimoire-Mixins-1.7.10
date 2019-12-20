@@ -3,6 +3,7 @@ package io.github.crucible.grimoire.mixins.thaumcraft;
 import com.gamerforea.eventhelper.util.EventUtils;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,7 +17,7 @@ public abstract class MixinWandManager {
     @Inject(method = "createCrucible", at = @At("HEAD"), cancellable = true)
     private static void checkPermission(ItemStack is, EntityPlayer player, World world, int x, int y, int z, CallbackInfoReturnable<Boolean> ci) {
         if (EventUtils.cantBreak(player, x, y, z)) {
-            player.addChatMessage(new ChatComponentTranslation("servertext.focus.permission"));
+            player.addChatMessage(new ChatComponentText("§4This focus is temporarily disabled."));
             ci.setReturnValue(false);
             ci.cancel();
         }
@@ -25,7 +26,7 @@ public abstract class MixinWandManager {
     @Inject(method = "createThaumonomicon", at = @At("HEAD"), cancellable = true)
     private static void checkPermission2(ItemStack is, EntityPlayer player, World world, int x, int y, int z, CallbackInfoReturnable<Boolean> ci) {
         if (EventUtils.cantBreak(player, x, y, z)) {
-            player.addChatMessage(new ChatComponentTranslation("servertext.focus.permission"));
+            player.addChatMessage(new ChatComponentText("§4This focus is temporarily disabled."));
             ci.setReturnValue(false);
             ci.cancel();
         }

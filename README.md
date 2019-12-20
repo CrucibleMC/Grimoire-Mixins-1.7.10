@@ -10,7 +10,7 @@ Some modules may require [EventHelper-1.7.10-1.11.jar](https://github.com/Crucib
 
 Some modules may require other modules.
 
-#####What is Event helper?
+##### What is Event helper?
 
 EventHelper is one of the best mods to help other mods work well on thermos/crucible. It helps fire bukkit events inside forge, so, its easy to check for permissions against popular protection plugins like GriefPreventionPlus and WorldGuard
 
@@ -25,7 +25,7 @@ Check out more over here https://github.com/gamerforEA/EventHelper
 * 4 - Put all the Grimoire-Mixins you want to use inside the folder grimoire, remember to check out the mixins requirements for each one.
 * 5 - Start the server again.
 
-###Modules
+### Modules
 
 There are several modules for different things... just use the ones you want :V
 Seriously, don't throw all of them if you don't need them!
