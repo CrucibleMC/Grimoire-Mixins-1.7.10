@@ -43,6 +43,12 @@ Seriously, don't throw all of them if you don't need them!
 * Requirements
   * Avaritia Mod
   * EventHelper
+  
+###### Baubles-Mixin
+
+* MixinEventHandlerEntity - Add a check for SoulBounded items (EnderIO Enchant) to prevent them from being droped on death!
+* Requirements:
+  * Baubles Mod
 
 ###### Botania-Mixin
 
