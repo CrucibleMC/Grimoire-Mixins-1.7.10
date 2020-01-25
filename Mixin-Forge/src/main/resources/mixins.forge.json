@@ -1,18 +1,17 @@
 {
   "required": true,
   "package": "io.github.crucible.grimoire.mixins.forge",
-  "mixins":[],
-  "server": [
+  "mixins":[
     "MixinEntityThrowable",
     "MixinTileEntity"
   ],
+  "server": [],
   "client": [
     "MixinItemStack",
     "MixinRenderItem",
     "MixinRenderManager"
   ],
   "compatibilityLevel": "JAVA_8",
-  "minVersion": "0.7.11",
-  "target": "@env(PREINIT)",
-  "refmap":"grimoire.refmap.json"
+  "refmap":"@MIXIN_REFMAP_NAME@",
+  "verbose": true
 }

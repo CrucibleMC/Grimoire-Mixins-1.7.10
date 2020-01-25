@@ -20,5 +20,5 @@
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.7.11",
   "target": "@env(INIT)",
-  "refmap":"grimoire.refmap.json"
+  "refmap":"@MIXIN_REFMAP_NAME@"
 }

@@ -15,10 +15,16 @@ buildscript {
     }
 }
 
-subprojects {
+import org.apache.tools.ant.filters.ReplaceTokens
+
+allprojects {
     apply plugin: 'java'
+}
+
+subprojects {
     apply plugin: 'idea'
     apply plugin: 'forge'
+    apply plugin: 'base'
 
     minecraft {
         version = "1.7.10-10.13.4.1614-1.7.10"
@@ -46,7 +52,8 @@ subprojects {
 
     ext {
         mixinSrg = new File(project.buildDir, 'mixins/mixin.grimoire.srg')
-        mixinRefMap = new File(project.buildDir, "mixins/grimoire.refmap.json")
+        mixinRefMapName = name.toLowerCase() + ".refmap.json"; //Sub-Project Name
+        mixinRefMap = new File(project.buildDir, "mixins/" + mixinRefMapName)
     }
 
     jar {
@@ -64,6 +71,12 @@ subprojects {
                 "-AoutRefMapFile=${project.mixinRefMap.canonicalPath}",
                 "-AreobfSrgFile=${project.file('build/srgs/mcp-srg.srg').canonicalPath}"
         ]
+    }
+
+    processResources{
+        eachFile{
+            filter ReplaceTokens, tokens:[MIXIN_REFMAP_NAME: mixinRefMapName]
+        }
     }
 
     task copySrgs(type: Copy, dependsOn: 'genSrgs') {
