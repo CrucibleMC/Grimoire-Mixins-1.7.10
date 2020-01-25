@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "io.github.crucible.grimoire.mixins.extrautilities",
+  "mixins":[
+    "MixinTileEntityEnderQuarry",
+    "MixinTileEntityTransferNode",
+    "MixinXUHelper"
+  ],
+  "server": [],
+  "client": [],
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7.11",
+  "target": "@env(INIT)",
+  "refmap":"grimoire.refmap.json"
+}

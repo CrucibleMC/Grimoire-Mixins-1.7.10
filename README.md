@@ -98,6 +98,16 @@ Seriously, don't throw all of them if you don't need them!
 * Requirements:
   * EnderIO Mod
 
+###### ExtraUtilities-Mixin
+
+* MixinTileEntityEnderQuarry - Add EventHelper support.
+* MixinXUHelper - Extra check for block existency.
+* TileEntityTransferNode - Disable Speed Upgrade Modifier.
+* Requirements:
+  * ExtraUtilities Mod
+  * EventHelper
+  * Forge-Mixin module.
+  
 ###### IC2-Mixin
 
 * MixinUtil - IndustrialCraft 2 uses methods that are old even for forge itself, because a few of them, IC2 is not compatible with CrucibleMC. This fix that! With this mixin you can run IC2 inside CrucibleMC.
