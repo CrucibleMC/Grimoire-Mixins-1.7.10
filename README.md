@@ -159,6 +159,7 @@ Seriously, don't throw all of them if you don't need them!
 * MixinTileArcaneBore - Add EventHelper support.
 * MixinTileNode - Disable hungry node grief.
 * MixinWandManager - Add EventHelper support.
+* MixinTileArcaneLampGrowth - Disable ArcaneLamp of Growth (Too much overpowered)
 * Requirements:
   * Thaumcraft Mod
   * EventHelper
