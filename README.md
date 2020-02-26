@@ -120,6 +120,7 @@ Seriously, don't throw all of them if you don't need them!
 * MixinFlamethrower - Add EventHelper support.
 * MixinStackUtils - Fix a few comparing methods.
 * MixinTileEntityDigitalMiner - Add weak reference to the Digital miner fakeplayers.
+* MixinContainers - Disable Shift-Click on All Mekanism Containers.
 * Requirements:
   * Mekanism Mod
   * EventHelper
