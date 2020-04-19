@@ -1,6 +1,5 @@
 package io.github.crucible.grimoire.mixins.extrautilities;
 
-import com.gamerforea.eventhelper.util.EventUtils;
 import com.rwtema.extrautils.ExtraUtils;
 import com.rwtema.extrautils.tileentity.enderquarry.IChunkLoad;
 import com.rwtema.extrautils.tileentity.transfernodes.Frequency;
@@ -14,9 +13,10 @@ import com.rwtema.extrautils.tileentity.transfernodes.pipes.IPipeCosmetic;
 import net.minecraft.tileentity.TileEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.Shadow;
 
-
+@Pseudo
 @Mixin(value = TileEntityTransferNode.class, remap = false)
 public abstract class MixinTileEntityTransferNode extends TileEntity implements IPipe, INode, IPipeCosmetic, IChunkLoad {
 
@@ -57,12 +57,13 @@ public abstract class MixinTileEntityTransferNode extends TileEntity implements 
 
             for(int i = 0; i < this.upgrades.getSizeInventory(); ++i) {
                 if (this.upgrades.getStackInSlot(i) != null && ExtraUtils.nodeUpgrade != null && this.upgrades.getStackInSlot(i).getItem() == ExtraUtils.nodeUpgrade) {
-                    if (this.upgrades.getStackInSlot(i).getItemDamage() == 0) {
+                    //if (this.upgrades.getStackInSlot(i).getItemDamage() == 0) {
                         //Mixin Replace maxCooldown with a limit of 6
-                        for(int k = 0; k < this.upgrades.getStackInSlot(i).stackSize && this.stepCoolDown < 2; ++k) {
-                            ++this.stepCoolDown;
-                        }
-                    } else if (this.upgrades.getStackInSlot(i).getItemDamage() == 6 && this.upgrades.getStackInSlot(i).hasDisplayName()) {
+                       // for(int k = 0; k < this.upgrades.getStackInSlot(i).stackSize && this.stepCoolDown < 2; ++k) {
+                       //     ++this.stepCoolDown;
+                       // }
+                    //} else
+                    if (this.upgrades.getStackInSlot(i).getItemDamage() == 6 && this.upgrades.getStackInSlot(i).hasDisplayName()) {
                         TransferNodeEnderRegistry.registerTile(new Frequency(this.upgrades.getStackInSlot(i)), this.buffer);
                         this.isReceiver = true;
                     } else if (this.upgrades.getStackInSlot(i).getItemDamage() == 7) {
