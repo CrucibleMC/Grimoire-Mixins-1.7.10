@@ -35,6 +35,14 @@ Seriously, don't throw all of them if you don't need them!
 * Add a few changes inside forge itself, to make things easier to integrate EventHelper inside other mods.
 * Requirements
 * None
+
+###### ArmourersWorkshop-Mixin
+
+* BlockMannequin - Add EventHelper support.
+* Requirements
+  * ArmourersWorkshop Mod
+  * EventHelper
+
 ###### Avaritia-Mixin
 
 * EntityGapingVoid - Disabled it.
