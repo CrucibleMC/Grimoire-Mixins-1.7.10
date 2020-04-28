@@ -179,3 +179,9 @@ Seriously, don't throw all of them if you don't need them!
 * MixinThETileInventory - Attempt to fix a dupe.
 * Requirements:
   * ThaumicEnergistics Mod
+  
+###### WorldEdit-Mixin
+
+* MixinUtilityCommands - Disable command '//calc'.
+* Requirements:
+  * WorldEdit Mod
