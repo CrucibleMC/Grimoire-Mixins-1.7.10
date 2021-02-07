@@ -174,6 +174,12 @@ Seriously, don't throw all of them if you don't need them!
   * EventHelper
   * Forge-Mixin module.
 
+###### ThermalDynamics-Mixin
+
+* MixinTileItemDuct - Fix NPE crash in some rare cases.
+* Requirements:
+  * ThermalDynamics Mod
+
 ###### ThaumicEnergistics-Mixin
 
 * MixinThETileInventory - Attempt to fix a dupe.
