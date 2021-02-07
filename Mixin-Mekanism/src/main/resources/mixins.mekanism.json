@@ -46,7 +46,8 @@
     "MixinBinRecipe",
     "MixinFlamethrower",
     "MixinStackUtils",
-    "MixinTileEntityDigitalMiner"
+    "MixinTileEntityDigitalMiner",
+    "MixinMekanismUtils"
   ],
   "server": [],
   "client": [],

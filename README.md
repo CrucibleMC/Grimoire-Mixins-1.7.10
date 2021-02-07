@@ -124,6 +124,7 @@ Seriously, don't throw all of them if you don't need them!
 * MixinStackUtils - Fix a few comparing methods.
 * MixinTileEntityDigitalMiner - Add weak reference to the Digital miner fakeplayers.
 * MixinContainers - Disable Shift-Click on All Mekanism Containers.
+* MixinMekanismUtils - Add simple StringToCrafting cache for recipes used by Mekanism
 * Requirements:
   * Mekanism Mod
   * EventHelper
