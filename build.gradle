@@ -39,7 +39,7 @@ subprojects {
     repositories {
         maven {
             name = 'spongepowered-repo'
-            url = 'http://repo.spongepowered.org/maven/'
+            url = 'https://repo.spongepowered.org/maven/'
         }
         mavenCentral()
     }
