@@ -116,12 +116,6 @@ Seriously, don't throw all of them if you don't need them!
   * EventHelper
   * Forge-Mixin module.
   
-###### IC2-Mixin
-
-* MixinUtil - IndustrialCraft 2 uses methods that are old even for forge itself, because a few of them, IC2 is not compatible with CrucibleMC. This fix that! With this mixin you can run IC2 inside CrucibleMC.
-* Requirements:
-  * IC2 Mod
-
 ###### Mekanism-Mixin
 
 * MixinBinRecipe - Disable bin recipes.
