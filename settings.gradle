@@ -18,5 +18,6 @@ include 'Mixin-ExtraUtilities'
 include 'Mixin-ArmourersWorkshop'
 include 'Mixin-WorldEdit'
 include 'Mixin-ThermalDynamics'
+include 'Mixin-MagicalCrops'
 include 'Mixin-CrucibleTimeMachine'
 
