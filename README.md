@@ -110,7 +110,8 @@ Seriously, don't throw all of them if you don't need them!
 
 * MixinTileEntityEnderQuarry - Add EventHelper support.
 * MixinXUHelper - Extra check for block existency.
-* TileEntityTransferNode - Disable Speed Upgrade Modifier.
+* MixinTileEntityTransferNode - Disable Speed Upgrade Modifier.
+* MixinItemLawSword - Disable insta kill of Kikoku
 * Requirements:
   * ExtraUtilities Mod
   * EventHelper

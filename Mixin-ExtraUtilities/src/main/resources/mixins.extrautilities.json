@@ -4,7 +4,8 @@
   "mixins":[
     "MixinTileEntityEnderQuarry",
     "MixinTileEntityTransferNode",
-    "MixinXUHelper"
+    "MixinXUHelper",
+    "MixinItemLawSword"
   ],
   "server": [],
   "client": [],
