@@ -4,23 +4,17 @@ import com.rwtema.extrautils.item.ItemLawSword;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
-@Mixin(value = ItemLawSword.class, remap = true)
-public abstract class MixinItemLawSword extends ItemSword {
-
-    public MixinItemLawSword(ToolMaterial p_i45356_1_) {
-        super(p_i45356_1_);
-    }
+@Mixin(value = ItemLawSword.class)
+public abstract class MixinItemLawSword {
 
     /**
      * @author EverNife
      * @reason Disable Kikoku killing on click
      */
-    @Overwrite(remap = true)
-    @Override
+    @Overwrite(remap = false)
     public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
         return true; //Disable this
     }
