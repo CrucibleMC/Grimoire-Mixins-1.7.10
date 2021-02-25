@@ -13,6 +13,12 @@ public abstract class MixinTileEntityAutoSpawner  {
     @Shadow
     protected boolean _spawnExact = false;
 
+    /**
+     * @author EverNife
+     * @reason Hardcode disable the _spawnExact function of MineFactoryRealoded
+     *
+     *   Many (too many) mobs can dupe items...
+     */
     @Inject(method = "activateMachine", at = @At("HEAD"), cancellable = true)
     private void checkPermission(CallbackInfoReturnable<Boolean> cir) {
         if (_spawnExact) _spawnExact = false;

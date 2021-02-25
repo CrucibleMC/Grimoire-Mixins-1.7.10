@@ -20,7 +20,7 @@ public class MixinBlockRubberSapling extends BlockSapling implements IRedNetNoCo
 
     /**
      * @author EverNife
-     * @reason Desativar as plantas do inferno que só servem para crashar o servidor!
+     * @reason Disable the most screwed tree on the entire mod_land, that it's only purpose is to crash servers!
      */
     @Overwrite
     public void func_149878_d(World world, int xCoord, int yCoord, int zCoord, Random rand) {

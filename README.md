@@ -133,6 +133,7 @@ Seriously, don't throw all of them if you don't need them!
 ###### MineFactoryReloaded-Mixin
 
 * MixinBlockRubberSapling - Disable the big rubber trees, all of them, now they behave like normal rubber trees.
+* MixinTileEntityAutoSpawner - HardCode disable '__spawnExact' from AutoSpawners to prevent dupes
 * Requirements:
   * MineFactoryReloaded Mod
 
