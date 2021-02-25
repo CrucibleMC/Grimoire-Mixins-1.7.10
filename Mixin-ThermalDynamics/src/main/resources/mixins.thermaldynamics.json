@@ -9,5 +9,6 @@
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.7.11",
   "target": "@env(DEFAULT)",
-  "refmap":"@MIXIN_REFMAP_NAME@"
+  "refmap":"@MIXIN_REFMAP_NAME@",
+  "verbose": true
 }
