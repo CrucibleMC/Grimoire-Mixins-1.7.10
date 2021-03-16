@@ -21,4 +21,5 @@ include 'Mixin-ThaumicEnergistics'
 include 'Mixin-ThermalDynamics'
 include 'Mixin-MagicalCrops'
 include 'Mixin-CrucibleTimeMachine'
+include 'Mixin-BetterFurnaces'
 

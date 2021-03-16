@@ -58,6 +58,12 @@ Seriously, don't throw all of them if you don't need them!
 * Requirements:
   * Baubles Mod
 
+###### BetterFurnaces-Mixin
+
+* MixinTileEntityBetterFurnace - Fix a console spam that occurs when pipes interact with the furnaces, like EnderIO ones.
+* Requirements:
+  * BetterFurnaces Mod
+
 ###### Botania-Mixin
 
 * EntityEnderAirBottle - Disabled impact.
