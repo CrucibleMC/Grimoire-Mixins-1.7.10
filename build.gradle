@@ -21,10 +21,13 @@ allprojects {
     apply plugin: 'java'
 }
 
+task clean_dist_folder(type: Delete){
+    delete "${rootDir}/dist"
+}
+
 subprojects {
     apply plugin: 'idea'
     apply plugin: 'forge'
-    apply plugin: 'base'
 
     minecraft {
         version = "1.7.10-10.13.4.1614-1.7.10"
@@ -87,6 +90,24 @@ subprojects {
     }
 
     compileJava.dependsOn copySrgs
+
+    task build_them_all {
+        dependsOn clean_dist_folder
+        dependsOn build
+        doLast {
+            def baseName = project.archivesBaseName
+            def version = project.version
+            def group = project.group
+            def DIST_DIR = "${rootDir}/dist"
+            def SRC_DIR = "${buildDir}/libs"
+
+            ant.mkdir(dir: DIST_DIR)
+            ant.copy(todir: DIST_DIR) {
+                fileset(dir: SRC_DIR,
+                        includes: "${baseName}*${version}*.jar,${baseName}*${version}*.jar")
+            }
+        }
+    }
 
     //Intelij IDEAL has a "BUG" that hides
     // theses functions bellow from the
