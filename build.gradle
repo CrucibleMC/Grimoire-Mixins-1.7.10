@@ -48,7 +48,7 @@ subprojects {
     }
 
     dependencies {
-        compile "org.spongepowered:mixin:0.7.11-SNAPSHOT"
+        compile "org.spongepowered:mixin:0.8.1"
         compileOnly 'org.jetbrains:annotations:16.0.2'
         compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     }
