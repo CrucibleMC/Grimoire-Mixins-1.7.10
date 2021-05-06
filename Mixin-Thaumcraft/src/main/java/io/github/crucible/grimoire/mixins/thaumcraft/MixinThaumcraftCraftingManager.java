@@ -34,30 +34,30 @@ public abstract class MixinThaumcraftCraftingManager {
 
     private static AspectList getObjectTagsDummyFunction(ItemStack itemstack, Item item, int meta) {
 
-        AspectList tmp = (AspectList) ThaumcraftApi.objectTags.get(Arrays.asList(item, meta));
+        AspectList tmp = ThaumcraftApi.objectTags.get(Arrays.asList(item, meta));
         if (tmp == null) {
             Collection<List> col = ThaumcraftApi.objectTags.keySet();
             Iterator i$ = col.iterator();
 
             while(i$.hasNext()) {
                 List l = (List)i$.next();
-                if ((Item)l.get(0) == item && l.get(1) instanceof int[]) {
-                    int[] range = (int[])((int[])l.get(1));
+                if (l.get(0) == item && l.get(1) instanceof int[]) {
+                    int[] range = (int[]) l.get(1);
                     Arrays.sort(range);
                     if (Arrays.binarySearch(range, meta) >= 0) {
-                        tmp = (AspectList)ThaumcraftApi.objectTags.get(Arrays.asList(item, range));
+                        tmp = ThaumcraftApi.objectTags.get(Arrays.asList(item, range));
                         return tmp;
                     }
                 }
             }
 
-            tmp = (AspectList)ThaumcraftApi.objectTags.get(Arrays.asList(item, 32767));
+            tmp = ThaumcraftApi.objectTags.get(Arrays.asList(item, 32767));
             if (tmp == null && tmp == null) {
                 if (meta == 32767 && tmp == null) {
                     int index = 0;
 
                     do {
-                        tmp = (AspectList)ThaumcraftApi.objectTags.get(Arrays.asList(item, index));
+                        tmp = ThaumcraftApi.objectTags.get(Arrays.asList(item, index));
                         ++index;
                     } while(index < 16 && tmp == null);
                 }
@@ -143,8 +143,8 @@ public abstract class MixinThaumcraftCraftingManager {
         return capAspects(tmp, 64);
     }
 
-    private static HashMap<String, AspectList> mapOfAspects = new HashMap<String, AspectList>();
-    private static AspectList EMPTY_ASPECT_LIST = new AspectList();
+    private static final HashMap<String, AspectList> mapOfAspects = new HashMap<String, AspectList>();
+    private static final AspectList EMPTY_ASPECT_LIST = new AspectList();
     /**
      * @author EverNife
      * @reason Ao se criar um cache para o mapa de aspectos, se previne uma IMENSA quantidade de lag em alguns casos especificos!

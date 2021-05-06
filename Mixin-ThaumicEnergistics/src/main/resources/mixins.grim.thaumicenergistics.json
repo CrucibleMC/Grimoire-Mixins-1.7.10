@@ -1,9 +1,9 @@
 {
   "required": true,
   "package": "io.github.crucible.grimoire.mixins.thaumicenergistics",
-  "mixins":[
-    "MixinThETileInventory",
-    "MixinContainerPartAcraneCraftingTerminal"
+  "mixins": [
+    "MixinContainerPartAcraneCraftingTerminal",
+    "MixinThETileInventory"
   ],
   "server": [],
   "client": [],
