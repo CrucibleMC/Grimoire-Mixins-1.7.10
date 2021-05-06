@@ -17,7 +17,7 @@ import java.util.Iterator;
 @Mixin(value = MekanismUtils.class, remap = false)
 public abstract class MixinMekanismUtils {
 
-    private static HashMap<String, ItemRecipeResult> cacheOfResults = new HashMap();
+    private static final HashMap<String, ItemRecipeResult> cacheOfResults = new HashMap();
 
     /**
      * @author EverNife

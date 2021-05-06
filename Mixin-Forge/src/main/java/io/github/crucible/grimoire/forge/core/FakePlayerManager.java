@@ -8,9 +8,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 public class FakePlayerManager {
-    private static GameProfile featherModProfile = new GameProfile(offlineUuidFromName("[FeatherMod]"), "[FeatherMod]");
+    private static final GameProfile featherModProfile = new GameProfile(offlineUuidFromName("[FeatherMod]"), "[FeatherMod]");
     private static SoftReference<FeatherFakePlayer> featherModFakePlayer = new SoftReference<>(null);
-    private static Cache<String, SoftReference<FeatherFakePlayer>> fakePlayerCache = new Cache<>(6000L, new Function<SoftReference<FeatherFakePlayer>>() {
+    private static final Cache<String, SoftReference<FeatherFakePlayer>> fakePlayerCache = new Cache<>(6000L, new Function<SoftReference<FeatherFakePlayer>>() {
         @Override
         public boolean run(SoftReference<FeatherFakePlayer> value) {
             return value.get() != null;

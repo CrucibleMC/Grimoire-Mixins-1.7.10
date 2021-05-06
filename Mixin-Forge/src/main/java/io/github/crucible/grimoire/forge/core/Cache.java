@@ -3,7 +3,6 @@ package io.github.crucible.grimoire.forge.core;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.TreeMultimap;
-import io.github.crucible.grimoire.forge.core.Function;
 
 import java.util.*;
 

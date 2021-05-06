@@ -2,6 +2,11 @@
   "required": true,
   "package": "io.github.crucible.grimoire.mixins.mekanism",
   "mixins": [
+    "MixinBinRecipe",
+    "MixinFlamethrower",
+    "MixinMekanismUtils",
+    "MixinStackUtils",
+    "MixinTileEntityDigitalMiner",
     "containers.MixinContainerAdvancedElectricMachine",
     "containers.MixinContainerChanceMachine",
     "containers.MixinContainerChemicalCrystallizer",
@@ -41,13 +46,7 @@
     "containers.MixinContainerSolarNeutronActivator",
     "containers.MixinContainerTeleporter",
     "containers.MixinContainerThermalEvaporationController",
-    "containers.MixinContainerUpgradeManagement",
-
-    "MixinBinRecipe",
-    "MixinFlamethrower",
-    "MixinStackUtils",
-    "MixinTileEntityDigitalMiner",
-    "MixinMekanismUtils"
+    "containers.MixinContainerUpgradeManagement"
   ],
   "server": [],
   "client": [],

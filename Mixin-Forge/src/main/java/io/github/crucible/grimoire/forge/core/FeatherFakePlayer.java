@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @SuppressWarnings("EntityConstructor")
 public class FeatherFakePlayer extends FakePlayer {
-    private UserIdent owner;
+    private final UserIdent owner;
 
     FeatherFakePlayer(WorldServer world, GameProfile name, String owner) {
         super(world, name);

@@ -1,16 +1,14 @@
 package io.github.crucible.grimoire.forge.core;
 
-import java.util.Map;
-import java.util.UUID;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
+import com.google.common.base.Charsets;
+import com.mojang.authlib.GameProfile;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.UsernameCache;
 
-import com.google.common.base.Charsets;
-import com.mojang.authlib.GameProfile;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.Map;
+import java.util.UUID;
 
 public class UserIdent {
 

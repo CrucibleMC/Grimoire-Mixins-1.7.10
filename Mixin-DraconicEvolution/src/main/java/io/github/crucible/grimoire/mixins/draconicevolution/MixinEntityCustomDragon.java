@@ -26,7 +26,7 @@ public abstract class MixinEntityCustomDragon extends EntityDragon {
     @Shadow
     protected boolean isUber = false;
     @Shadow
-    private boolean createPortal = true;
+    private final boolean createPortal = true;
 
     public MixinEntityCustomDragon(World p_i1700_1_) {
         super(p_i1700_1_);

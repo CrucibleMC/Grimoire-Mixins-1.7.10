@@ -42,8 +42,8 @@ public abstract class MixinEventHandlerEntity {
                     ei.delayBeforeCanPickup = 40;
                     float f1 = e.worldObj.rand.nextFloat() * 0.5F;
                     float f2 = e.worldObj.rand.nextFloat() * (float) Math.PI * 2.0F;
-                    ei.motionX = (double) (-MathHelper.sin(f2) * f1);
-                    ei.motionZ = (double) (MathHelper.cos(f2) * f1);
+                    ei.motionX = -MathHelper.sin(f2) * f1;
+                    ei.motionZ = MathHelper.cos(f2) * f1;
                     ei.motionY = 0.20000000298023224D;
                     event.drops.add(ei);
                     inventoryBaubles.stackList[i] = null;
