@@ -1,5 +1,6 @@
 package io.github.crucible.grimoire.mixins.minefactoryreloaded;
 
+import io.github.crucible.grimoire.data.minefactoryreloaded.IHasGrindingWorld;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -9,7 +10,7 @@ import powercrystals.minefactoryreloaded.tile.machine.TileEntityGrinder;
 import powercrystals.minefactoryreloaded.world.GrindingWorldServer;
 
 @Mixin(value = TileEntityGrinder.class, remap = false)
-public abstract class MixinTileEntityGrinder  {
+public abstract class MixinTileEntityGrinder implements IHasGrindingWorld {
 
     @Shadow protected GrindingWorldServer _grindingWorld;
 
@@ -23,4 +24,8 @@ public abstract class MixinTileEntityGrinder  {
         if (_grindingWorld == null) cir.setReturnValue(false);
     }
 
+    @Override
+    public GrindingWorldServer getGrindingWorld() {
+        return this._grindingWorld;
+    }
 }

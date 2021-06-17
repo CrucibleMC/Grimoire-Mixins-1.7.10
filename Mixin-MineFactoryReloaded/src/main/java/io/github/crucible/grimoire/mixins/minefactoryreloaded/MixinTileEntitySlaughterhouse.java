@@ -1,16 +1,14 @@
 package io.github.crucible.grimoire.mixins.minefactoryreloaded;
 
+import io.github.crucible.grimoire.data.minefactoryreloaded.IHasGrindingWorld;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import powercrystals.minefactoryreloaded.tile.machine.TileEntityGrinder;
 import powercrystals.minefactoryreloaded.tile.machine.TileEntitySlaughterhouse;
-import powercrystals.minefactoryreloaded.world.GrindingWorldServer;
 
 @Mixin(value = TileEntitySlaughterhouse.class, remap = false)
-public abstract class MixinTileEntitySlaughterhouse  extends TileEntityGrinder {
+public abstract class MixinTileEntitySlaughterhouse {
 
     /**
      * @author EverNife
@@ -19,7 +17,8 @@ public abstract class MixinTileEntitySlaughterhouse  extends TileEntityGrinder {
      */
     @Inject(method = "activateMachine", at = @At("HEAD"), cancellable = true)
     private void checkPermission(CallbackInfoReturnable<Boolean> cir) {
-        if (super._grindingWorld == null) cir.setReturnValue(false);
+        IHasGrindingWorld this_tile = (IHasGrindingWorld) this;
+        if (this_tile.getGrindingWorld() == null) cir.setReturnValue(false);
     }
 
 }
