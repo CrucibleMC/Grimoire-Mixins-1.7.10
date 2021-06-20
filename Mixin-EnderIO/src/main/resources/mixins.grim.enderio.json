@@ -1,7 +1,9 @@
 {
   "required": true,
   "package": "io.github.crucible.grimoire.mixins.enderio",
-  "mixins": [],
+  "mixins": [
+    "MixinPainterContainer"
+  ],
   "server": [
     "MixinEnchantmentSoulBound",
     "MixinPacketConnectionMode",
