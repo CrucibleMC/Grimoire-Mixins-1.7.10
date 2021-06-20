@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @Mixin(value = PacketGivePlayerXP.class, remap = false)
 public abstract class MixinPacketGivePlayerXP {
 
-    @Inject(method = "onMessage", at = @At(target = "Lcrazypants/enderio/xp/IHaveExperience;getContainer()Lcrazypants/enderio/xp/ExperienceContainer;", value = "INVOKE"), locals = LocalCapture.CAPTURE_FAILHARD)
+    @Inject(method = "onMessage", at = @At(target = "Lcrazypants/enderio/xp/IHaveExperience;getContainer()Lcrazypants/enderio/xp/ExperienceContainer;", value = "INVOKE"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
     private void beforeGiveXp(PacketGivePlayerXP message, MessageContext ctx, CallbackInfoReturnable<IMessage> ci, EntityPlayer player, TileEntity tile, IHaveExperience xpTile) {
         if (EventUtils.cantBreak(player, tile.xCoord, tile.yCoord, tile.zCoord)) ci.setReturnValue(null);
     }
