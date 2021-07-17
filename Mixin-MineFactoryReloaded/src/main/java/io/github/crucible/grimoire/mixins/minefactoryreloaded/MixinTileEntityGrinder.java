@@ -12,7 +12,8 @@ import powercrystals.minefactoryreloaded.world.GrindingWorldServer;
 @Mixin(value = TileEntityGrinder.class, remap = false)
 public abstract class MixinTileEntityGrinder implements IHasGrindingWorld {
 
-    @Shadow protected GrindingWorldServer _grindingWorld;
+    @Shadow
+    protected GrindingWorldServer _grindingWorld;
 
     /**
      * @author EverNife
