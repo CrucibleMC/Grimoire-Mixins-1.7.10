@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew --version
 
       - name: Build with Gradle
-        run: ./gradlew clean build_them_all --refresh-dependencies
+        run: ./gradlew cleanCache clean build_them_all --refresh-dependencies
 
       - name: Create sha_shot variable
         id: vars
