@@ -1,5 +1,14 @@
 # Grimoire-Mixins!
 
+### Disclaimer!
+
+_Maybe, in a distante future someone merge this into a single mod, i am not the one that will do that!_
+
+These mixins are tested ONLY with:
+ - [**Grimoire Legacy 1.7.10-1.0.2a**](https://github.com/CrucibleMC/Grimoire-legacy/releases/tag/1.7.10-1.0.2a)
+
+But it """""""should""""""" work on any newer version of Grimoire if legacy support is still a thing.
+
 Collection of mixins for the core-mod [Grimoire](https://github.com/CrucibleMC/Grimoire)
 
 ### What is it?
