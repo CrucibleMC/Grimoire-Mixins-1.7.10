@@ -38,7 +38,3 @@ hs_err_pid*
 
 # Ignore Distribution
 dist/*
-
-# IndustrialCraft WIP
-Mixin-IndustrialCraft
-Mixin-IndustrialCraft/*
