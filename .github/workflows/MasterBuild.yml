@@ -26,10 +26,6 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew cleanCache clean build_them_all --refresh-dependencies
 
-      - name: Create sha_shot variable
-        id: vars
-        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
       - name: Delete latest Dev Release
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
@@ -38,11 +34,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Create commit_count Variable
+        id: commit_count
+        run: echo "::set-output name=commit_count::$(git rev-list --count HEAD)"
+
+      - name: Create sha_short Variable
+        id: sha_short
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
       - name: Create latest Dev Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
           prerelease: true
-          name: Latest Dev Build - ${{ steps.vars.outputs.sha_short }}
+          name: "DevBuild [${{ steps.commit_count.outputs.commit_count }}] - ${{ steps.sha_short.outputs.sha_short }}"
           files: |
             dist/*.jar
