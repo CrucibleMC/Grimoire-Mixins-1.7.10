@@ -3,6 +3,7 @@
   "package": "io.github.crucible.grimoire.mixins.minefactoryreloaded",
   "mixins":[
     "MixinBlockRubberSapling",
+    "MixinServerPacketHandler",
     "MixinTileEntityAutoSpawner",
     "MixinTileEntityGrinder",
     "MixinTileEntitySlaughterhouse"
