@@ -1,8 +1,6 @@
 description = "A coremod full of patches and fixes made from black magic and suffering."
 
 archivesBaseName = "FunkyLocomotion-Mixin"
-version = "1.0.1b"
-
 
 dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])       //Current Folder Libs

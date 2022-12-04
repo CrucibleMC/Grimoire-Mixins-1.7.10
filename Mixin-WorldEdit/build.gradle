@@ -1,8 +1,6 @@
 description = "A coremod full of patches and fixes made from black magic and suffering."
 
 archivesBaseName = "WorldEdit-Mixin"
-version = "1.0.1a"
-
 
 dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])       //Current Folder Libs

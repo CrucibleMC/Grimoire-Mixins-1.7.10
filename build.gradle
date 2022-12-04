@@ -34,7 +34,6 @@ subprojects {
     }
 
     group = 'io.github.crucible'
-    version = '1.0.1a'
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
     compileJava.options.encoding = 'UTF-8'
@@ -106,7 +105,7 @@ subprojects {
             ant.mkdir(dir: DIST_DIR)
             ant.copy(todir: DIST_DIR) {
                 fileset(dir: SRC_DIR,
-                        includes: "${baseName}*${version}*.jar,${baseName}*${version}*.jar")
+                        includes: "${baseName}.jar")
             }
         }
     }
