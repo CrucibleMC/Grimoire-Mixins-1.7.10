@@ -1,5 +1,13 @@
 # Grimoire-Mixins!
 
+## Archive
+
+There are several types of Mixin on 1.7.10. Grimoire is one of them!
+
+I have decided to archive this project because MANY (at least almost every main fix) of this project is already inserted on the GTNH fixes.
+
+My suggestion is for you to use GTNH's mods on 1.7.10!
+
 ### Disclaimer!
 
 _Maybe, in a distante future someone merge this into a single mod, i am not the one that will do that!_
